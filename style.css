@@ -1,0 +1,391 @@
+/* ===== Base ===== */
+
+:root {
+  --blue: #0171f9;
+  --blue-light: #2386fe;
+  --accent: #ee626b;
+  --accent-hover: #f2858c;
+  --text: #2a2a2a;
+  --muted: #777;
+  --bg-soft: #f7f7f7;
+  --card-bg: #eeeeee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.btn {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #ffb703;
+  outline-offset: 2px;
+}
+
+.eyebrow {
+  display: block;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* ===== Header ===== */
+
+.header {
+  background-color: var(--blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px 50px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.header-links a {
+  color: #fff;
+  padding: 6px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.2s;
+}
+
+.header-links a:hover,
+.header-links a.active {
+  background-color: var(--blue-light);
+}
+
+.header-links .btn {
+  margin-left: 10px;
+}
+
+/* ===== Landing ===== */
+
+.landing-page {
+  background-color: var(--blue);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 50px 60px;
+  border-radius: 0 0 50px 50px;
+}
+
+.landing-text {
+  max-width: 520px;
+}
+
+.landing-text .eyebrow {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.landing-text h1 {
+  font-size: 44px;
+  margin: 0 0 15px;
+}
+
+.landing-text p {
+  line-height: 1.6;
+  margin: 0 0 25px;
+}
+
+/* Search input with the button sitting inside it */
+.landing-search {
+  display: flex;
+  max-width: 420px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+.landing-search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0 15px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.landing-search .btn {
+  padding: 10px 22px;
+}
+
+.landing-image img {
+  width: 260px;
+  border-radius: 20px;
+}
+
+/* ===== Sections ===== */
+
+.section {
+  padding: 40px 50px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 30px;
+  margin: 0;
+}
+
+/* ===== Cards ===== */
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card .thumb {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .genre {
+  margin: 0 0 4px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Trending: name on the left, cart button on the right */
+.trending-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.trending-cards .thumb {
+  height: 170px;
+}
+
+.trending-cards .card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+.cart-btn {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: transform 0.2s;
+}
+
+.cart-btn:hover {
+  transform: scale(1.1);
+}
+
+.cart-btn img {
+  width: 26px;
+}
+
+/* Most played: soft grey panel with white cards */
+.most-played {
+  background-color: var(--bg-soft);
+  border-radius: 60px;
+  padding: 50px 60px;
+  margin: 40px auto;
+}
+
+.top-games-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.top-games-cards .card {
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.top-games-cards .thumb {
+  aspect-ratio: 1 / 1;
+}
+
+.top-games-cards .card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.top-games-cards h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.top-games-cards .btn {
+  font-size: 11px;
+}
+
+/* ===== Search feedback ===== */
+
+.no-results {
+  text-align: center;
+  color: var(--muted);
+  font-size: 18px;
+  padding: 20px 50px 40px;
+  margin: 0;
+}
+
+/* ===== Footer ===== */
+
+.footer {
+  background-color: var(--blue);
+  color: #fff;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 40px;
+  border-radius: 50px 50px 0 0;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 900px) {
+  .landing-page {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .landing-search {
+    margin: 0 auto;
+  }
+
+  .landing-image img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .header-links {
+    justify-content: center;
+  }
+
+  .header-links .btn {
+    margin-left: 0;
+  }
+
+  .landing-page {
+    padding: 30px 20px 45px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .landing-text h1 {
+    font-size: 32px;
+  }
+
+  .section {
+    padding: 30px 20px;
+  }
+
+  .section-header h2 {
+    font-size: 24px;
+  }
+
+  .most-played {
+    border-radius: 30px;
+    padding: 30px 20px;
+    margin: 20px 10px;
+  }
+
+  .top-games-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}

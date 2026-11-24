@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUGX Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <a href="#" class="logo-link"><img class="logo" src="images/logo.png" alt="LUGX logo" /></a>
+    <nav class="header-links">
+      <a href="#" class="active">Home</a>
+      <a href="#trending">Our Shop</a>
+      <a href="#most-played">Most Played</a>
+      <a href="#contact">Contact</a>
+      <button type="button" class="btn">Sign In</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- LANDING -->
+    <section class="landing-page">
+      <div class="landing-text">
+        <span class="eyebrow">Welcome to LUGX!</span>
+        <h1>Best Gaming Site Ever!</h1>
+        <p>Discover trending titles, see what everyone is playing, and find your next adventure, all in one place.</p>
+        <form class="landing-search" role="search">
+          <input type="search" placeholder="Search games or genres..." aria-label="Search games" />
+          <button type="submit" class="btn">Search</button>
+        </form>
+      </div>
+      <div class="landing-image">
+        <img src="images/banner-image.jpg" alt="Hooded assassin game character" />
+      </div>
+    </section>
+
+    <!-- TRENDING GAMES -->
+    <section class="section" id="trending">
+      <span class="eyebrow">Trending</span>
+      <div class="section-header">
+        <h2>Trending Games</h2>
+        <button type="button" class="btn">View All</button>
+      </div>
+
+      <div class="trending-cards">
+        <article class="card">
+          <img class="thumb" src="images/trending-01.jpg" alt="Warframe" />
+          <div class="card-info">
+            <div class="card-name">
+              <p class="genre">Action</p>
+              <h3>Warframe</h3>
+            </div>
+            <a href="#" class="cart-btn" aria-label="Add Warframe to cart">
+              <img src="images/online-shopping.png" alt="" />
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="images/trending-02.jpg" alt="Neon Strike" />
+          <div class="card-info">
+            <div class="card-name">
+              <p class="genre">Anime Action</p>
+              <h3>Neon Strike</h3>
+            </div>
+            <a href="#" class="cart-btn" aria-label="Add Neon Strike to cart">
+              <img src="images/online-shopping.png" alt="" />
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="images/trending-03.jpg" alt="Squad Zero" />
+          <div class="card-info">
+            <div class="card-name">
+              <p class="genre">Shooter</p>
+              <h3>Squad Zero</h3>
+            </div>
+            <a href="#" class="cart-btn" aria-label="Add Squad Zero to cart">
+              <img src="images/online-shopping.png" alt="" />
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="images/trending-04.jpg" alt="Dragon Duel" />
+          <div class="card-info">
+            <div class="card-name">
+              <p class="genre">Card Game</p>
+              <h3>Dragon Duel</h3>
+            </div>
+            <a href="#" class="cart-btn" aria-label="Add Dragon Duel to cart">
+              <img src="images/online-shopping.png" alt="" />
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MOST PLAYED -->
+    <section class="section most-played" id="most-played">
+      <span class="eyebrow">Top Games</span>
+      <div class="section-header">
+        <h2>Most Played</h2>
+        <button type="button" class="btn">View All</button>
+      </div>
+
+      <div class="top-games-cards">
+        <article class="card">
+          <img class="thumb" src="images/top-game-01.jpg" alt="Warframe cover" />
+          <div class="card-info">
+            <p class="genre">Action</p>
+            <h3>Warframe</h3>
+            <button type="button" class="btn">Explore</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="images/top-game-02.jpg" alt="PUBG: Battlegrounds cover" />
+          <div class="card-info">
+            <p class="genre">Battle Royale</p>
+            <h3>PUBG: Battlegrounds</h3>
+            <button type="button" class="btn">Explore</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="images/top-game-03.jpg" alt="Apex Legends cover" />
+          <div class="card-info">
+            <p class="genre">Battle Royale</p>
+            <h3>Apex Legends</h3>
+            <button type="button" class="btn">Explore</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="images/top-game-04.jpg" alt="The Sims 4 cover" />
+          <div class="card-info">
+            <p class="genre">Simulation</p>
+            <h3>The Sims 4</h3>
+            <button type="button" class="btn">Explore</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="images/top-game-05.jpg" alt="Lost Ark cover" />
+          <div class="card-info">
+            <p class="genre">MMORPG</p>
+            <h3>Lost Ark</h3>
+            <button type="button" class="btn">Explore</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="images/top-game-06.jpg" alt="Destiny 2 cover" />
+          <div class="card-info">
+            <p class="genre">Shooter</p>
+            <h3>Destiny 2</h3>
+            <button type="button" class="btn">Explore</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <p class="no-results" hidden>No games match your search.</p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <p>&copy; 2026 LUGX Gaming. Design based on the free LUGX template by TemplateMo.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
